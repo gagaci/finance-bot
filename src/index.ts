@@ -154,13 +154,13 @@ async function main(): Promise<void> {
     .setMyCommands([
       { command: "start", description: "Start finance tracking" },
       { command: "help", description: "Show command help" },
-      { command: "categories", description: "Show income and expense categories" },
-      { command: "income", description: "Add income: /income 5000000 Salary Note" },
-      { command: "expense", description: "Add expense: /expense 45000 Food Note" },
+      { command: "categories", description: "Show categories" },
+      { command: "income", description: "Add income, e.g. /income 5000000 Salary April salary" },
+      { command: "expense", description: "Add expense, e.g. /expense 45000 Food Lunch" },
       { command: "today", description: "Show today's summary" },
-      { command: "week", description: "Show weekly report and charts" },
+      { command: "week", description: "Show weekly report" },
       { command: "month", description: "Show monthly report" },
-      { command: "delete_last", description: "Delete your latest transaction" },
+      { command: "delete_last", description: "Delete the latest transaction" },
     ])
     .catch((err) => console.warn("[bot] setMyCommands failed:", err.message));
 
