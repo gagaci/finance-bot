@@ -1,0 +1,25 @@
+{
+  "name": "finance-bot",
+  "version": "1.0.0",
+  "description": "Personal Telegram finance tracker with daily summaries and weekly reports",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "node dist/src/index.js",
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "daily": "ts-node -e \"require('./src/index').runDailySummary()\"",
+    "weekly": "ts-node -e \"require('./src/index').runWeeklyReport()\""
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "node-cron": "^3.0.3",
+    "node-telegram-bot-api": "^0.66.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/node-cron": "^3.0.11",
+    "@types/node-telegram-bot-api": "^0.64.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
